@@ -1,0 +1,260 @@
+{
+  "name": "AWS IOT",
+  "color": "orange",
+  "data": {
+    "score": 25,
+    "heading": "<tspan class='title'>Heading </tspan>  <tspan class='author' x='20' dx='20' dy='25'>--</tspan> <tspan class='text' x='20' dx='10' dy='22'>Information about Apps & Solutions </tspan>",
+    "link": {
+      "text": "IOT",
+      "href": "<a href='https://aws.amazon.com/iot/' target='_blank'>AWS IOT</a>"
+    },
+    "references": "<a href='https://aws.amazon.com/iot/solutions/?nc=sn&loc=3&dn=1&iot-solution-repository-cards.sort-by=item.additionalFields.headline&iot-solution-repository-cards.sort-order=asc&awsf.iot-solution-repository-filter-industry=*all&awsf.iot-solution-repository-filter-products=*all&awsf.iot-solution-repository-filter-usecase=*all&awsf.iot-solution-repository-filter-solution-type=*all'>IOT solutions</a>",
+    "integrations": "IOT Integrations",
+    "description": "AWS offers Internet of Things (IoT) services and solutions to connect and manage billions of devices. Collect, store, and analyze IoT data for industrial, consumer, commercial, and automotive workloads.",
+    "workshop": "<a href='https://iot.awsworkshops.com/basics/'>IoT Workshop</a>",
+    "useCase": "<a href='https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.sortDate&customer-references-cards.sort-order=desc&awsf.content-type=*all&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-industry=*all&awsf.customer-references-use-case=*all&awsf.customer-references-tech-category=*all&awsf.customer-references-product=*all'>Case Study</a>",
+    "recommendation": "use it",
+    "text": "Description of Apps & Solutions"
+  },
+  "children": [
+    {
+      "name": "Apps & Solutions",
+      "color": "CadetBlue",
+      "data": {
+        "score": 25,
+        "heading": "<tspan class='title'>Heading </tspan>  <tspan class='author' x='20' dx='20' dy='25'>--</tspan> <tspan class='text' x='20' dx='10' dy='22'>Information about Apps & Solutions </tspan>",
+        "link": {
+          "text": "IOT",
+          "href": "<a href='https://aws.amazon.com/iot/' target='_blank'>AWS IOT</a>"
+        },
+        "references": "IOT architecture",
+        "integrations": "IOT Integrations",
+        "description": "IOT description",
+        "workshop": "IOT workshop",
+        "useCase": "<a href='https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.sortDate&customer-references-cards.sort-order=desc&awsf.content-type=*all&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-industry=*all&awsf.customer-references-use-case=*all&awsf.customer-references-tech-category=*all&awsf.customer-references-product=*all'>Case Study</a>",
+        "recommendation": "use it",
+        "text": "Description of Apps & Solutions"
+      },
+      "children": [
+        {
+          "name": "SiteWise",
+          "color": "CornflowerBlue",
+          "size": 1,
+          "data": {
+            "score": 25,
+            "heading": "SiteWise",
+            "link": {
+              "text": "Sitewise Site",
+              "href": "<a href='https://aws.amazon.com/iot-sitewise/'>SiteWise Site</a>"
+            },
+            "recommendation": "Use Sitewise for ",
+            "references": "<a href='https://aws.amazon.com/iot-sitewise/resources/'>References</a>",
+            "integrations": "sitewise Integrations",
+            "description": "sitewise info",
+            "Workshop": " <a href='https://iot-sitewise.workshop.aws/en/>' Workshop </a>",
+            "useCase": "<a href='https://aws.amazon.com/iot/solutions/industrial-iot/'> Industrial Use Cases</a>",
+            "text": "SiteWise is a cloud-based, open-source, real-time data analytics platform that enables organizations to collect, analyze, and visualize data from thousands of devices and sensors."
+          }
+        },
+        {
+          "name": "Analytics",
+          "color": "CornflowerBlue",
+          "references": "architecture",
+          "workshop": "workshop",
+          "useCase": "useCase",
+          "size": 1,
+          "data": {
+            "score": 25,
+            "heading": "SiteWise",
+            "link": {
+              "text": "SiteWise",
+              "href": "https://aws.amazon.com/iot-sitewise/"
+            },
+            "recommendation": "use it",
+            "text": "sitewise decription"
+          }
+        },
+        {
+          "name": "Events",
+          "color": "CornflowerBlue",
+          "size": 1
+        },
+        {
+          "name": "KVS",
+          "color": "CornflowerBlue",
+          "size": 1
+        },
+        {
+          "name": "TwinMaker",
+          "color": "CornflowerBlue",
+          "size": 1
+        },
+        {
+          "name": "RoboMaker",
+          "color": "CornflowerBlue",
+          "size": 1
+        },
+        {
+          "name": "FleetWise",
+          "color": "CornflowerBlue",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "name": "Secure Connectivity and Control",
+      "color": "DarkViolet",
+      "children": [
+        {
+          "name": "Core",
+          "color": "BlueViolet",
+          "size": 1
+        },
+        {
+          "name": "RoboRunner",
+          "color": "BlueViolet",
+          "size": 1
+        },
+        {
+          "name": "IoT DM",
+          "color": "BlueViolet",
+          "size": 1
+        },
+        {
+          "name": "Device Defender",
+          "color": "BlueViolet",
+          "size": 1
+        },
+        {
+          "name": "1-Click",
+          "color": "BlueViolet",
+          "size": 1
+        }
+      ]
+    },
+    {
+      "name": "Device & Edge Software",
+      "color": "DarkGreen",
+      "data": {
+        "score": 25,
+        "heading": "Heading for Device & Edge Software",
+        "link": {
+          "text": "D&E  Info for link",
+          "href": "D&E some link"
+        },
+        "references": "D&E architecture",
+        "integrations": "D&E  Integrations",
+        "description": "Edge computing brings compute closer to the point where data is generated. With AWS IoT services, you can enable devices to take actions, aggregate data, and filter it locally on the device.",
+        "workshop": "D&E  workshop",
+        "useCase": "<a href='https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.sortDate&customer-references-cards.sort-order=desc&awsf.content-type=*all&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-industry=*all&awsf.customer-references-use-case=*all&awsf.customer-references-tech-category=*all&awsf.customer-references-product=*all'>Case Study</a>",
+        "recommendation": "D&E use it",
+        "text": "D&E  THis is for devices"
+      },
+      "children": [
+        {
+          "name": "FreeRTOS",
+          "color": "DarkSlateGray",
+          "size": 1
+        },
+        {
+          "name": "ExpressLink",
+          "color": "DarkSlateGray",
+          "size": 1
+        },
+        {
+          "name": "Device SDK",
+          "color": "DarkSlateGray",
+          "data": {
+            "score": 25,
+            "heading": "Heading for Device SDK",
+            "link": {
+              "text": "Device SDK  Info for link",
+              "href": "<a href='https://docs.aws.amazon.com/iot/latest/developerguide/iot-sdks.html'> Device SDK</a>"
+            },
+            "references": "<a href='https://aws.amazon.com/architecture/iot/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc&awsf.content-type=*all&awsf.methodology=*all'>Device SDK architecture </a>",
+            "integrations": "Device SDK  Integrations",
+            "description": "AWS IoT Device SDKs, open-source libraries, developer guides, sample apps, and porting guides to help you build innovative IoT solutions with AWS IoT and your choice of hardware platforms.",
+            "workshop": "Device SDK  workshop",
+            "useCase": "<a href='https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.sortDate&customer-references-cards.sort-order=desc&awsf.content-type=*all&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-industry=*all&awsf.customer-references-use-case=*all&awsf.customer-references-tech-category=*all&awsf.customer-references-product=*all'>Case Study</a>",
+            "recommendation": "Device SDK use it",
+            "text": "Device SDK  THis is for devices"
+          },
+          "children": [
+            {
+              "name": " Python",
+              "color": "DarkOliveGreen",
+              "size": 1,
+              "data": {
+                "score": 25,
+                "heading": "Here is the heading",
+                "link": {
+                  "text": "title of link",
+                  "href": "<a href='https://github.com/aws/aws-iot-device-sdk-python-v2'>Python SDK </a>"
+                },
+                "references": "Python architecture",
+                "integrations": "Python  Integrations",
+                "description": "This document provides information about the AWS IoT Device SDK v2 for Python.",
+                "workshop": "<a href='https://github.com/aws/aws-iot-device-sdk-python-v2/tree/main/samples'>Python Examples </a>",
+                "useCase": "<a href='https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.sortDate&customer-references-cards.sort-order=desc&awsf.content-type=*all&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-industry=*all&awsf.customer-references-use-case=*all&awsf.customer-references-tech-category=*all&awsf.customer-references-product=*all'>Case Study</a>",
+                "recommendation": "Python use it",
+                "text": "Python THis is a description"
+              }
+            },
+            {
+              "name": " Go",
+              "data": {
+                "score": 25,
+                "heading": "Here is the heading",
+                "link": {
+                  "text": "title of link",
+                  "href": "some link"
+                },
+                "text": "THis is a description"
+              },
+              "color": "DarkOliveGreen",
+              "size": 1
+            },
+            {
+              "name": " Javascript",
+              "data": {
+                "score": 25,
+                "heading": "Here is the heading",
+                "link": {
+                  "text": "title of link",
+                  "href": "some link"
+                },
+                "text": "THis is a description"
+              },
+              "color": "DarkOliveGreen",
+              "size": 1
+            },
+            {
+              "name": "Java",
+              "data": {
+                "score": 25,
+                "heading": "Here is the heading",
+                "link": {
+                  "text": "title of link",
+                  "href": "some link"
+                },
+                "text": "THis is a description"
+              },
+              "color": "DarkOliveGreen",
+              "size": 1
+            }
+          ]
+        },
+        {
+          "name": "GreenGrass",
+          "color": "DarkSlateGray",
+          "size": 1
+        },
+        {
+          "name": "Device Tester",
+          "color": "DarkSlateGray",
+          "size": 1
+        }
+      ]
+    }
+  ]
+}

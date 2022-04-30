@@ -1,0 +1,167 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <script src="//unpkg.com/d3"></script>
+
+    <!-- <script src="//unpkg.com/sunburst-chart"></script> -->
+
+    <script src="./telescope.js"></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        margin: 0
+      }
+
+    </style>
+  </head>
+  <!-- <div id="chart"></div> -->
+
+  <body>
+    <div>
+      <div id="title" class="title">
+        <h1>Telescope: AWS IoT Services zoomable wheel </h1>
+        <h5>Click on the service to zoom in and see details. Click on center to zoom out.</h5>
+      </div>
+      <div id="breadCrumb"> </div>
+
+
+      <div class="flex flex-left">
+        <div id="chart" class="sunburst-viz flex flex-left">
+        </div>
+        <div id="iotTableDiv" class="iotTableDiv">
+          <table id="iotTable" class="iotTable">
+            <tr id="iotname" class="iotname">
+              <td id="label" class="label">Name:</td>
+              <td id="value" class="value"></td>
+            </tr>
+            <tr id="iotdesc" class="description">
+              <td id="label" class="label">Description:</td>
+              <td id="name" class="value"></td>
+            </tr>
+            <tr id='iotsite' class="iotsite">
+              <td id="label" class="label">Site:</td>
+              <td id="value" class="value">
+                <a id='siteurl' href="/URL"></a>
+              </td>
+            </tr>
+            <tr id='iotref' class="iotref">
+              <td id="label" class="label">Reference:</td>
+              <td id="value" class="value"></td>
+            </tr>
+            <tr id='iotint' class="iotint">
+              <td id="label" class="label">Integrations:</td>
+              <td id="value" class="value"></td>
+            </tr>
+            <tr id='iotusecase' class="iotusecase">
+              <td id="label" class="label">Case Study:</td>
+              <td id="value" class="value"></td>
+            </tr>
+            <tr id='iotworkshop' class="iotworkshop">
+              <td id="label" class="label">Workshop:</td>
+              <td id="value" class="value"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+    <script>
+      const color = d3.scaleOrdinal(d3.schemePaired);
+      const myChart = Sunburst();
+      const chartInfo = fetch('./aws-iot.json').then(res => res.json()).then(data => {
+        myChart
+          .data(data)
+          .label(node => formatName(node))
+          .centerRadius(.1)
+          .width(932)
+          .height(932)
+          .size('size')
+          .excludeRoot(false)
+          .maxLevels(6)
+
+          .onClick(node => {
+            myChart.focusOnNode(node); // maintain default behaviour of zooming when clicked
+            showIOTServiceInfo(node); // this method's implementation is up to you
+          })
+          .labelOrientation('angular')
+          .color('color')
+          .tooltipContent((d, node) => `Description: <i>${d.data?.description}</i>`)
+          (document.getElementById('chart'));
+      });
+
+
+
+
+      function showIOTServiceInfo(d) {
+        if (d == null) {
+          return;
+        }
+        console.log("this is the log", d);
+        jQuery('#iotname .value').html(d.name);
+        jQuery('#iotsite .value').html(d.data?.link?.href);
+        jQuery('#iotdesc .value').html(d.data?.description);
+        jQuery('#iotref .value').html(d.data?.references);
+        jQuery('#iotint .value').html(d.data?.integrations);
+        jQuery('#iotworkshop .value').html(d.data?.workshop);
+        jQuery('#iotusecase .value').html(d.data?.useCase);
+        // add text to div id="breadCrumb"
+        jQuery('#breadCrumb').html(d.name);
+        return d;
+      };
+
+      function formatName(d) {
+        return d.name
+        // return d.name.replace(/\s/g, "<br>");
+      };
+
+      function breadCrumbs(d) {
+        console.log("this is the breadcrumb d data", d);
+        var crumbs = [];
+        var current = d;
+        console.log("this is the breadcrumb parent", d.name);
+        while (current.parent) {
+          crumbs.push(current.name);
+          current = current.parent;
+        }
+        crumbs.reverse();
+        console.log("this is the breadcrumb array", crumbs);
+        return crumbs.join(" > ");
+      }
+
+
+      function chunkSubstr(str, size) {
+        console.log("--->", str);
+        size = Math.round(size)
+        console.log(str, Math.round(size))
+        if (str == null) return [];
+        str = String(str);
+        console.log(size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str])
+        return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
+      }
+
+    </script>
+  </body>
+
+  <footer>
+    <div class="footer">
+      <p>
+        <a href="" target="_blank">
+          <img src="https://www.aws.amazon.com/favicon.ico" alt="AWS Logo" width="32" height="32">
+        </a>
+        This is a demo project. It is the property of Amazon Web Services.
+      </p>
+    </div>
+
+  </footer>
+
+</html>
+<!-- .color((d, parent) => color(parent ? parent.data.name : null)) -->
